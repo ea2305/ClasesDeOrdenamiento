@@ -21,9 +21,17 @@ public class Main{
 		System.out.println("Heapsort Iteraciones : " + Heap.getIndex());
 		Heap.restartIndex();
 		
+		//Peor caso de prueba
+		for(int i = 0 ; i < 1000 ; i++)
+			A[i] = 1000 - i;
+		
 		Bubble.burbuja(A);
 		System.out.println("Burbuja Iteraciones : " + Bubble.getIndex());
 		Bubble.restartIndex();
+		
+		//Peor caso de prueba
+		for(int i = 0 ; i < 1000 ; i++)
+			A[i] = 1000 - i;
 		
 		sort.sort(A);
 		System.out.println("Quicksort Iteraciones : " + sort.getIndex());
@@ -44,9 +52,27 @@ public class Main{
 		System.out.println("Heapsort Iteraciones : " + Heap.getIndex());
 		Heap.restartIndex();
 		
+		//Caso aleatorio de prueba
+		for(int i = 0 ; i < 1000 ; i++){
+			
+			int a = random.nextInt(1000);
+			//int a = (int)Math.random()*1000;
+			//System.out.print(", " + a);
+			A[i] = a;	
+		}		
+		
 		Bubble.burbuja(A);
 		System.out.println("Burbuja Iteraciones : " + Bubble.getIndex());
 		Bubble.restartIndex();
+		
+		//Caso aleatorio de prueba
+		for(int i = 0 ; i < 1000 ; i++){
+			
+			int a = random.nextInt(1000);
+			//int a = (int)Math.random()*1000;
+			//System.out.print(", " + a);
+			A[i] = a;	
+		}		
 		
 		sort.sort(A);
 		System.out.println("Quicksort Iteraciones : " + sort.getIndex());
@@ -62,9 +88,17 @@ public class Main{
 		System.out.println("Heapsort Iteraciones : " + Heap.getIndex());
 		Heap.restartIndex();
 		
+		//Mejor caso de prueba
+		for(int i = 0 ; i < 1000 ; i++)
+			A[i] = i;
+		
 		Bubble.burbuja(A);
 		System.out.println("Burbuja Iteraciones : " + Bubble.getIndex());
 		Bubble.restartIndex();
+		
+		//Mejor caso de prueba
+		for(int i = 0 ; i < 1000 ; i++)
+			A[i] = i;
 		
 		sort.sort(A);
 		System.out.println("Quicksort Iteraciones : " + sort.getIndex());
